@@ -19,5 +19,5 @@ public class Cosecha_Fina extends Cereal {
         }
 
 
-    }
 }
+
