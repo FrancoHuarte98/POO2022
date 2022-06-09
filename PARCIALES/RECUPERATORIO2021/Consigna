@@ -1,0 +1,31 @@
+Un sistema bancario que provea los siguientes servicios:
+     Apertura y cierre de cuentas. De una cuenta se registra numero, titular y saldo.
+     Extracción y depósito en una cuenta dada de un cliente.
+     Transferencia de fondos entre distintas cuentas.
+     Registro de todas las transacciones realizadas.
+     Búsqueda de Transacciones, por ejemplo:
+     Buscar las operaciones por más de $10.000
+     Buscar operaciones por menos de $500
+     Buscar las operaciones de la cuenta # 40344
+     Buscar las operaciones de un día dado.
+     Buscar las operaciones entre dos fechas
+     Cualquier combinación lógica de las anteriores.
+     Posibilidad de deshacer una o varias transacciones ya realizadas:
+     Deshacer las operaciones de la cuenta # 5455
+     Deshacer las operaciones de la cuenta # 5455 de una fecha dada
+     Deshacer las operaciones por mas de $10000
+     Cualquier combinación lógica de las anteriores.
+
+En cuanto a las operaciones de extracción y transferencia, el monto de las mismas no puede superar al dinero
+disponible de la cuenta.
+2) Extienda la solución para incorporar:
+    • Cuentas especiales que permiten operaciones en descubierto de hasta $5000, $10000 o $20000 (si no tiene
+    fondos suficientes se le presta hasta estos límites).
+    • Una nueva transacción deposito de cheque. Esta operación deposita el monto del cheque menos un %
+    definido por el banco que se descuenta del monto del mismo. Adicionalmente se debe notificar por email a
+    la AFIP indicando titulo: “deposito cheque”y cuerpo: el numero del cheque, el importe del cheque y el %
+    correspondiente de impuesto. Cuando se cancela el deposito de cheque ademas de actualizar el saldo de la
+    cuenta se envia otro email a la AFIP indicando titulo: “cancelación de cheque” y cuerpo: numero de
+    cheque.
+Utilizar el método de clase sendEmail(String destino, String titulo, String cuerpo) de la clase EMailServer para el
+envío del email. El email de la afip es afip@gov.ar.
