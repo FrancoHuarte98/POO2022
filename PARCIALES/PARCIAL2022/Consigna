@@ -1,0 +1,37 @@
+El Sistema Integrado de Salud (SIS) desea informatizar la distribución de camas en los
+diferentes establecimientos sanitarios de la ciudad (hospitales, centros de salud, sanatorios,
+clínicas). El SIS cuenta con un conjunto de camas, cada una provista con diferentes
+equipamientos (“respirador artificial”, “elevación hidráulica”, “colchón antiescaras”, etc). Las
+camas de cada establecimiento sanitario se agrupan en diferentes salas (generales, terapia
+intermedia, terapia intensiva), que pueden a su vez agruparse en galerías y pabellones. No
+necesariamente las camas dependen de una sala particular. Dado el contexto de
+emergencia sanitaria, puede haber camas que dependen de una galería o un pabellón
+(distribuidas en sus pasillos) o también del hospital (por ejemplo las camas ubicadas en las
+guardias médicas).
+
+De cada paciente se registra su nombre, edad, una lista de síntomas y lista de equipamiento
+necesario para su atención. Cuando un paciente arriba a un establecimiento sanitario, se
+debe poder obtener el listado de camas disponibles (no deben estar ya ocupadas por otro
+paciente), que puedan ser ocupadas por el paciente.
+
+Para que un paciente pueda ocupar una cama, debe cumplir con ciertos requerimientos que
+dependen de qué cama se trate. Una cama podrá ser ocupada por un determinado paciente
+dependiendo de diferentes factores:
+    ● Que el paciente no requiera como equipamiento de la cama “respirador artificial”.
+    ● Que el paciente sea menor a 60 años.
+    ● Que el paciente no posea entre sus síntomas “pérdida de olfato” o “pérdida de
+        gusto”.
+    ● Que el paciente sea mayor a 25 años.
+    ● Que el paciente posea entre sus síntomas “dificultad para respirar”.
+    ● Cualquier variación de los factores anteriores o combinación de los mismos (por
+    ejemplo, que sea mayor a 18 años y menor a 40 años o no tenga entre sus síntomas
+    “dolor de cabeza”.
+
+Adicionalmente a lo anterior el SIS debe ser capaz de
+    1) informar el total de camas en el sistema
+    2) obtener una copia de todos los elementos (respetando la estructura
+organizativa) pero restringida a las camas ocupadas por determinados pacientes. Por
+ejemplo, conservar sólo las camas ocupadas por pacientes mayores de 25 años o solo las
+camas con pacientes con “dificultad para respirar” entre sus síntomas (estos son solo
+algunos ejemplos posibles). Si un elemento de su estructura no posee camas con pacientes
+de las características dadas, no se incluye en la copia de este elemento.
